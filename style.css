@@ -1,0 +1,99 @@
+body{
+    background-image: url('back.jpg');
+    margin:  auto;
+}
+
+.content{
+    margin: auto;
+    width: 1200px;
+    height: 1000px;
+}
+
+.center{
+    float:left;
+    width: 992px;
+    height: 900px;
+    background-color: #c3d6ed;
+    overflow: scroll;
+    padding: 4px;   
+}
+
+.buttons{
+    float: left;
+    width: 200px;
+    height: 908px;
+    background-color: rgba(123, 123, 123, 0.5);
+}
+
+.buttons ul{
+    padding: 0;
+    margin: 0;
+}
+.buttons li{
+    list-style: none;
+}
+
+.buttons li li a{
+    background-color: #1a1d36; 
+    border: none;
+    color: white;
+    padding: 8px 83.5px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;  
+}
+
+.buttons li a{
+    background-color: #4f5683; 
+    border: none;
+    color: white;
+    padding: 8px 83.5px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+}
+
+.buttons li li a:hover{
+   
+    background-color: rgb(223, 217, 235);
+    color: white;
+
+}
+
+.buttons li a:hover{
+   
+    background-color: rgb(223, 217, 235);
+    color: white;
+
+}
+
+
+th{
+    background-color: #47384d;
+    color: white;
+    padding: 8px 145px;
+}
+
+td{
+    background-color: #8882db;
+    color: white;
+    padding: 8px 145px;
+}
+
+table tr:nth-child(odd) td{
+    background-color: #dfb8f1;
+    color: white;
+    padding: 8px 145px;
+}
+
+.footer{
+    position: relative;
+    float: left;
+    text-align: center;
+    height:120px;
+    width: 1180px;
+    background-color: #8999e2;
+    padding: 10px;
+}
