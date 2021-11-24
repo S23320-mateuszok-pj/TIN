@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+
+        function zd1() {
+            var a = parseInt(document.getElementById("A").value);
+            var b = parseInt(document.getElementById("B").value);
+            var c = parseInt(document.getElementById("C").value);
+
+            if (a*a+b*b==c*c) {
+                document.getElementById("wynik").innerHTML = "To jest trójka pitagorejska";   
+            }else if (a*a+c*c==b*b) {
+                document.getElementById("wynik").innerHTML = "To jest trójka pitagorejska";   
+            }else if (c*c+b*b==a*a) {
+                document.getElementById("wynik").innerHTML = "To jest trójka pitagorejska";   
+            }
+            else{
+                document.getElementById("wynik").innerHTML = "To nie jest trójka pitagorejska";
+            }
+
+        }
+
+        function zd3() {
+         
+            var bok = parseInt(document.getElementById("bok").value);
+            var arr = [];   
+            for ( var i = 0; i <= bok ;i++) {
+                for (var j = 0; j < bok; j++) {
+                    arr.push(i*j);                   
+                }
+                console.log(arr);
+                console.log("\n");
+                arr=[];
+            }
+        }
+        
+        function zd4(){
+            function fib(num) {
+                
+                if(num == 0) return 0;
+                if(num == 1) return 1;
+                return fib(num-1)+fib(num-2);
+            }
+            
+            var num = parseFloat(document.getElementById("fib").value); 
+            for (var i = 0; i<=num; i++){
+                console.log(fib(i));
+            }
+        }
+
+        function zd5() {
+            var w = parseInt(document.getElementById("wysokosc").value);
+            var arr = [];
+            for (var i = 0; i <= w ; i++) {
+                for (var j = 0; j <= i; j++) {
+                    arr.push("*");                    
+                }
+                console.log(arr);
+                console.log("\n");
+                arr=[];
+            }
+        }
+
+        function zd6() {
+            var w = parseInt(document.getElementById("wysokosc2").value);
+            var arr = [];
+
+            for (var i=1; i<=w; i++){
+            for (var j=w; j>i; j--){
+                arr.push(" ");
+            }
+            console.log(arr);
+            arr = [];
+            for (var k=1; k<=(i * 2) -1; k++)
+            {
+                if(k == 1 || k == i*2 -1 || k == 1)
+                    arr.push("*");
+                else
+                    arr.push(" ");
+            }
+            console.log(arr);
+            console.log("\n")
+            arr = [];
+        }
+        }
+       
+        function zd7(rodzaj) {
+            var a = parseFloat(document.getElementById("boka").value);
+            var b = parseFloat(document.getElementById("bokb").value); 
+            var h = parseFloat(document.getElementById("wys").value); 
+            var wynik = parseFloat(0);
+           // var a = 2;
+            //var b = 2;
+            //var h = 2;
+
+            
+
+            switch (rodzaj) {
+                case 1:
+                    wynik = (a*h)/2;
+                    document.getElementById("wyn").innerHTML = wynik;
+                    break;
+                case 2:
+                    wynik = a*b;
+                    document.getElementById("wyn").innerHTML = wynik;
+                    break;
+                case 3:
+                    wynik = a*h;
+                    document.getElementById("wyn").innerHTML = wynik;
+                    break;
+                case 4:
+                    wynik = (a+b)*h;
+                    document.getElementById("wyn").innerHTML = wynik;
+                    break;
+                default:
+                    break;
+            }
+        }
+    </script>
+    <title>JS</title>
+</head>
+<body>
+    <p>Zadanie 1</p>
+    
+    <input type="text" id="A" placeholder="A">
+    <input type="text" id="B" placeholder="B">
+    <input type="text" id="C" placeholder="C">
+    <input type="button" value="wynik" onclick="zd1()">
+    <div id="wynik"></div>
+    
+    <p>Zadanie 3</p>
+    <input type="text" id="bok" placeholder="Podaj liczbę">
+    <input type="button" value="Generuj Tabliczkę" onclick="zd3()">
+
+    <p>Zadanie 4</p>
+    <input type="text" id="fib" placeholder="Podaj długość ciągu">
+    <input type="button" value="Wylicz ciąg" onclick="zd4()">
+
+    <p>Zadanie 5</p>
+    <input type="text" id="wysokosc" placeholder="Podaj wysokosc choinki">
+    <input type="button" value="Stwórz choinkę" onclick="zd5()">
+    
+    <p>Zadanie 6</p>
+    <input type="text" id="wysokosc2" placeholder="Podaj wysokosc choinki">
+    <input type="button" value="Stwórz choinkę" onclick="zd6()">
+
+    <p>Zadanie 7</p>
+    <input type="text" id="boka" placeholder="Zmienna a">
+    <input type="text" id="bokb" placeholder="Zmienna b">
+    <input type="text" id="wys" placeholder="Zmienna h">
+    <input type="button" value="Pole trójkąta" onclick="zd7(1)">
+    <input type="button" value="Pole prostokąta" onclick="zd7(2)">
+    <input type="button" value="Pole równoległoboku" onclick="zd7(3)">
+    <input type="button" value="Pole trapezu" onclick="zd7(4)">
+    <div id="wyn"></div>
+</body>
+</html>
