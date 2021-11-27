@@ -18,14 +18,30 @@ function zd7(array) {
 
     switch (array[3]) {
         case 1:
-            return (a*h)/2;
+            console.log(trojkat(array[0],array[2]));
         case 2:
-            return a*b;
+            console.log(prostokat(array[0],array[1]));
         case 3:
-            return a*h;
+            console.log(rownoleglobok(array[0],array[2]));
         case 4:
-            return(a+b)*h;
+            console.log(trapez(array[0],array[1],array[2]));
         default:
             break;
+    }
+
+    function trojkat(a,h) {
+        return (a*h)/2;
+    }
+
+    function prostokat(a,b) {
+        return a*b;
+    }
+
+    function rownoleglobok(a,h) {
+        return a*h;
+    }
+
+    function trapez(a,b,h) {
+        return(a+b)*h;
     }
 }
